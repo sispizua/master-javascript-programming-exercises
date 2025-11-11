@@ -19,6 +19,24 @@ let currentInventory = [
 
 function getLaceNameDataForShoes(inventory) {
     // your code here
+    const result = [];
+
+  for (const designer of inventory) {
+    for (const shoe of designer.shoes) {
+      // Separa por espacios y comas; conserva guiones como en "low-top" o "lace-up"
+      const nameWords = shoe.name.split(/[,\s]+/).filter(Boolean);
+
+      // Busca la primera palabra que contenga "lace" (case-insensitive)
+      const targetWordIndex = nameWords.findIndex(w => /lace/i.test(w));
+
+      if (targetWordIndex !== -1) {
+        result.push({ nameWords, targetWordIndex });
+      }
+    }
+  }
+
+  return result;
+    
     
 }
 

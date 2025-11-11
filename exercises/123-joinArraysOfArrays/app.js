@@ -1,6 +1,7 @@
 function joinArrayOfArrays(arr) {
   // your code here
-  
+    return arr.reduce((acc, cur) => acc.concat(cur), []);
+
 }
 
 let output = joinArrayOfArrays([

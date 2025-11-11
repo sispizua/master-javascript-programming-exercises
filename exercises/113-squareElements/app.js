@@ -1,5 +1,10 @@
 function squareElements(arr) {
   // your code here
+  let square = [];
+  for(const n of arr){
+    square.push(n**2);
+  }
+  return square;
   
 }
 

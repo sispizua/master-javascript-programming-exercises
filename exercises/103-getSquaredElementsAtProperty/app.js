@@ -1,5 +1,10 @@
 function getSquaredElementsAtProperty(obj, key) {
     // your code here
+    const square = obj[key];
+    if(!Array.isArray(square) || square.length === 0){
+      return []
+    }
+    return square.map(n => n **2)
     
 }
 

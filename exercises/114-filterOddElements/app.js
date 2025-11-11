@@ -1,5 +1,6 @@
 function filterOddElements(arr) {
   // your code here
+  return arr.filter(n => n % 2 != 0);
   
 }
 

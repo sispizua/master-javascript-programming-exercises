@@ -5,23 +5,28 @@ function PhoneNumberFormatter(numbers) {
 PhoneNumberFormatter.prototype.render = function() {
   let string = '';
   // your code here
-  
+  const area = this.getAreaCode();
+  const exchange = this.getExchangeCode();
+  const line = this.getLineNumber();
+
+  string = this.parenthesize(area) + ' ' +exchange + '-' + line;
+
   return string;
 };
 
 PhoneNumberFormatter.prototype.getAreaCode = function() {
   // your code here
-  
+  return this.slice(0,3);
 };
 
 PhoneNumberFormatter.prototype.getExchangeCode = function() {
   // your code here
-  
+  return this.slice(3,6);
 };
 
 PhoneNumberFormatter.prototype.getLineNumber = function() {
   // your code here
-  
+  return this.slice(6,10);
 };
 
 PhoneNumberFormatter.prototype.parenthesize = function(string) {

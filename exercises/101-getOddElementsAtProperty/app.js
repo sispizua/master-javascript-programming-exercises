@@ -1,6 +1,10 @@
 function getOddElementsAtProperty(obj, key) {
     // your code here
-    
+    const odd = obj[key];
+    if(!Array.isArray(odd) || odd.length === 0 ){
+      return [];
+    }
+    return odd.filter(el => el % 2 != 0);
 }
 
 let obj = {

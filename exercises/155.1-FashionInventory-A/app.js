@@ -21,7 +21,15 @@ function renderInventory(inventory) {
     // your code here
     // hint: before you just dive into coding...
     // it's a good idea to sketch out a skeleton like you've been seeing earlier in this module...
-    
+    const result = [];
+
+  for (const designer of inventory) {
+    for (const shoe of designer.shoes) {
+      result.push([designer.name, shoe.name, shoe.price]);
+    }
+  }
+
+  return result;
 }
 
 console.log(renderInventory(currentInventory))

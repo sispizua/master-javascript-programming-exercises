@@ -1,5 +1,7 @@
 function computePerimeterOfACircle(radius) {
   // your code here
+  const perimetro = 2*Math.PI*radius ;
+  return perimetro;
 
 }
 

@@ -19,7 +19,18 @@ let currentInventory = [
 
 function renderInventory(shoeList) {
     // your code here
-    
+    const result = [];
+
+  for (const designer of shoeList) {
+    for (const shoe of designer.shoes) {
+      // case-insensitive: 'Black', 'BLACK', etc.
+      if (shoe.name.toLowerCase().includes('black')) {
+        result.push([designer.name, shoe.name, shoe.price]);
+      }
+    }
+  }
+
+  return result; // [] si no hay coincidencias
 }
 
 console.log(renderInventory(currentInventory));
